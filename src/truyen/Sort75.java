@@ -90,3 +90,37 @@ Kết thúc vì mid > high.
 Kết quả: [0, 0, 1, 1, 2, 2]
 *
 * */
+
+
+/*
+*
+* public class SortColorsCounting {
+    public void sortColors(int[] nums) {
+        int count0 = 0, count1 = 0, count2 = 0;
+
+        // Bước 1: đếm
+        for (int num : nums) {
+            if (num == 0) count0++;
+            else if (num == 1) count1++;
+            else count2++;
+        }
+
+        // Bước 2: ghi đè lại mảng
+        int index = 0;
+        for (int i = 0; i < count0; i++) nums[index++] = 0;
+        for (int i = 0; i < count1; i++) nums[index++] = 1;
+        for (int i = 0; i < count2; i++) nums[index++] = 2;
+    }
+
+    // test nhanh
+    public static void main(String[] args) {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+        new SortColorsCounting().sortColors(nums);
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+        // Output: 0 0 1 1 2 2
+    }
+}
+
+* */
